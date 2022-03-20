@@ -1,5 +1,6 @@
-codigo = gets.to_i
-quantity = gets.to_i
+valor = gets.split(' ')
+codigo = valor[0].to_i
+quantity = valor[1].to_i
 case codigo 
 when 1
     total = quantity * 4.00
