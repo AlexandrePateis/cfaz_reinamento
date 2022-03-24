@@ -1,10 +1,19 @@
-cont = 0
-valores = []
+=begin 
+Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”. Utilize a fórmula:
 
-while cont !=3
-    valor = gets.to_i
-    valores.push(valor)
-    cont += 1
+Obs.: a fórmula apenas calcula o maior entre os dois primeiros (a e b). Um segundo passo, portanto é necessário para chegar no resultado esperado.
+
+Entrada
+O arquivo de entrada contém três valores inteiros.
+
+Saída
+Imprima o maior dos três valores seguido por um espaço e a mensagem "eh o maior".
+=end 
+values = gets.split(' ').map(&:to_i)
+a, b, c = values
+maior = (a+b+(a-b).abs)/2
+if c > maior 
+    puts "#{c} eh o maior"
+else
+    puts "#{maior} eh o maior"
 end
-
-puts"#{valores.max} eh o maior"
